@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard | EduLearn</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Inter, sans-serif;
+    background: #f3f6fb;
+    color: #14213d;
+}
+
+header {
+    background: #102d50;
+    color: white;
+    padding: 22px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: 800;
+}
+
+.logo i {
+    color: #f5bd45;
+    margin-right: 8px;
+}
+
+.logout {
+    background: #f5bd45;
+    color: #102d50;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+main {
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 25px;
+}
+
+.welcome-card {
+    background: white;
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 8px 30px rgba(0,0,0,.05);
+}
+
+.welcome-card h1 {
+    margin-bottom: 15px;
+}
+
+.welcome-card p {
+    color: #77849a;
+    line-height: 1.8;
+}
+
+@media(max-width:500px) {
+    header {
+        padding: 18px;
+    }
+
+    .welcome-card {
+        padding: 25px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <i class="fa-solid fa-graduation-cap"></i>
+        EduLearn
+    </div>
+
+    <button class="logout" id="logoutButton">
+        <i class="fa-solid fa-right-from-bracket"></i>
+        Logout
+    </button>
+</header>
+
+<main>
+    <section class="welcome-card">
+        <h1>Welcome to EduLearn!</h1>
+
+        <p id="userName">Loading your account...</p>
+
+        <p id="userEmail"></p>
+    </section>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script>
+const SUPABASE_URL = "https://ccddbcbmypeianekxhez.supabase.co";
+const SUPABASE_KEY = "sb_publishable_orYahZVqH7xGceVZqORwFA_npWRYBlw";
+
+const supabaseClient = window.supabase.createClient(
+    SUPABASE_URL,
+    SUPABASE_KEY
+);
+
+async function checkUser() {
+    const { data, error } = await supabaseClient.auth.getUser();
+
+    if (error || !data.user) {
+        window.location.replace("./login.html");
+        return;
+    }
+
+    const user = data.user;
+
+    document.getElementById("userName").textContent =
+        "Hello, " + (user.user_metadata?.full_name || "Student") + "!";
+
+    document.getElementById("userEmail").textContent =
+        "Your email: " + user.email;
+}
+
+checkUser();
+
+document.getElementById("logoutButton").addEventListener("click", async () => {
+    const button = document.getElementById("logoutButton");
+    button.disabled = true;
+
+    const { error } = await supabaseClient.auth.signOut();
+
+    if (error) {
+        alert("Logout failed: " + error.message);
+        button.disabled = false;
+        return;
+    }
+
+    window.location.replace("./login.html");
+});
+</script>
+
+</body>
+</html>

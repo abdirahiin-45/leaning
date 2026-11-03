@@ -1,247 +1,838 @@
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MODERN TECH ACADEMY</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <header>
-        <h1>MODERN TECH ACADEMY</h1>
- <nav class="navbar">
-     <ul>
-        <li><a href="#home">home</a></li>
-        <li><a href="#about">about</a></li>
-        <li><a href="#courses">courses</a></li>
-        <li><a href="#instructors">instructors</a></li>
-        <li><a href="#contact">contact Us</a></li>
-    
-       <div class="button">
-        
-                <button class="btn-login">Login</button>
-                <button class="btn-join">Join Now</button>
+    <meta
+      name="description"
+      content="EduLearn is a professional online learning platform offering courses, expert instructors and career development."
+    />
+    <meta
+      name="keywords"
+      content="Online Learning, Education, Courses, Web Development, Programming"
+    />
+    <meta name="author" content="EduLearn" />
 
-            </div>
-        </ul>
-</nav>
-    
+    <title>EduLearn - Learn Skills. Build Your Future.</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <!-- ANNOUNCEMENT BAR -->
+    <div class="announcement-bar">
+      <div class="container announcement-content">
+        <p>
+          <i class="fa-solid fa-graduation-cap"></i>
+          Upgrade Your Skills With Our Professional Courses
+        </p>
+        <a href="#courses">
+          Explore Courses
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="header" id="header">
+      <div class="container navbar">
+        <a href="#home" class="logo">
+          <div class="logo-icon">
+            <i class="fa-solid fa-graduation-cap"></i>
+          </div>
+          <span>Edu<span class="logo-highlight">Learn.</span></span>
+        </a>
+
+        <nav class="nav-menu" id="navMenu">
+          <ul class="nav-links">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#courses">Courses</a></li>
+            <li><a href="#instructors">Instructors</a></li>
+            <li><a href="#testimonials">Reviews</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+
+          <div class="mobile-auth">
+            <a href="./login.html" class="login-btn" data-login-link>
+              Login
+            </a>
+
+            <a href="./login.html" class="register-btn" data-login-link>
+              Get Started
+            </a>
+
+            <a
+              href="./dashboard.html"
+              data-account-link
+              style="display: none"
+            >
+              My Account
+            </a>
+
+            <button type="button" data-logout style="display: none">
+              Logout
+            </button>
+          </div>
+        </nav>
+
+        <div class="nav-actions">
+          <a href="./login.html" class="login-btn" data-login-link>
+            Login
+          </a>
+
+          <a href="./login.html" class="register-btn" data-login-link>
+            Get Started
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+
+          <a
+            href="./dashboard.html"
+            data-account-link
+            style="display: none"
+          >
+            My Account
+          </a>
+
+          <button type="button" data-logout style="display: none">
+            Logout
+          </button>
+        </div>
+
+        <button
+          class="menu-toggle"
+          id="menuToggle"
+          type="button"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="navMenu"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
     </header>
 
+    <main>
+      <!-- HERO SECTION -->
+      <section class="hero" id="home">
+        <div class="container hero-container">
+          <div class="hero-content">
+            <div class="hero-badge">
+              <span class="badge-dot"></span>
+              THE FUTURE OF ONLINE EDUCATION
+            </div>
 
-<div class="hero"  id="home"> 
+            <h1>
+              Unlock Your Potential.
+              <span>Learn Without Limits.</span>
+            </h1>
 
-    <h2>Learn Today <br><span>Build Tomorrow</span></h2> 
+            <p class="hero-description">
+              Discover world-class courses, learn from industry experts, and
+              develop the skills you need to build a successful future.
+            </p>
 
-    <p> 
-        Modern Tech Academy provides hands-on training in cutting-edge 
-        technologies to help you launch a successful tech career. 
-    </p>
+            <div class="hero-buttons">
+              <a href="#courses" class="btn-primary">
+                Explore Courses
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
 
-    <div class="hero-buttons">
-        <button >Get Started</button>
-        <button>Explore Courses</button>
-    </div>
+              <a href="#about" class="btn-secondary">
+                <i class="fa-regular fa-circle-play"></i>
+                Discover More
+              </a>
+            </div>
 
-</div>
+            <div class="hero-trust">
+              <div class="trust-avatars">
+                <img src="https://i.pravatar.cc/80?img=12" alt="Student" />
+                <img src="https://i.pravatar.cc/80?img=32" alt="Student" />
+                <img src="https://i.pravatar.cc/80?img=47" alt="Student" />
+                <img src="https://i.pravatar.cc/80?img=11" alt="Student" />
+              </div>
 
+              <div class="trust-info">
+                <div class="trust-rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <p>Join our learning community</p>
+              </div>
+            </div>
+          </div>
 
+          <div class="hero-visual">
+            <div class="hero-image-wrapper">
+              <img
+                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1000&q=85"
+                alt="Students learning together"
+              />
+            </div>
 
-<!-- main-section -->
- <main>
-<section id="about">
-    <div class="contect">
-    <h2>about Us</h2>
-    <p>We are a modern technology academy dedicated to helping students build practical digital skills. <br>Our goal is to provide quality training in web development, programming,<br> and other technology fields, preparing learners for successful careers in the digital world.</p>
-     <div class="icons">
-        <div class="icon-boxs">
-            <h3>🎯Our Mission</h3>
-            <p>To provide quality technology education and practical skills.</p>
+            <div class="floating-card students-card">
+              <div class="floating-icon purple-icon">
+                <i class="fa-solid fa-users"></i>
+              </div>
+              <div>
+                <h3>10K+</h3>
+                <p>Active Students</p>
+              </div>
+            </div>
 
+            <div class="floating-card courses-card">
+              <div class="floating-icon orange-icon">
+                <i class="fa-solid fa-book-open"></i>
+              </div>
+              <div>
+                <h3>200+</h3>
+                <p>Online Courses</p>
+              </div>
+            </div>
+
+            <div class="hero-decoration"></div>
+          </div>
         </div>
-        <div class="icon-boxs">
-    
-            <h3>👁️icon-boxs</h3><br>
-            <p>To To inspire the next generation of technology professionals.</p>
+      </section>
 
+      <!-- PARTNERS -->
+      <section class="partners">
+        <div class="container">
+          <p>BUILD YOUR FUTURE WITH QUALITY EDUCATION</p>
+
+          <div class="partner-logos">
+            <span><i class="fa-brands fa-google"></i> Google</span>
+            <span><i class="fa-brands fa-microsoft"></i> Microsoft</span>
+            <span><i class="fa-brands fa-aws"></i> AWS</span>
+            <span><i class="fa-brands fa-figma"></i> Figma</span>
+            <span><i class="fa-brands fa-meta"></i> Meta</span>
+          </div>
         </div>
-        <div class="icon-boxs">
-            <h3>🚩Our Goal</h3>
-            ""
-            <p>To help students build skills for successful digital careers..</p>
+      </section>
 
+      <!-- ABOUT -->
+      <section class="about section-padding" id="about">
+        <div class="container about-grid">
+          <div class="about-image">
+            <img
+              src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=85"
+              alt="Students studying together"
+            />
+
+            <div class="about-experience">
+              <i class="fa-solid fa-award"></i>
+              <div>
+                <h3>Quality</h3>
+                <p>Education First</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-content">
+            <span class="section-label">ABOUT EDULEARN</span>
+
+            <h2>
+              Education Is The Key To
+              <span>A Better Future.</span>
+            </h2>
+
+            <p>
+              We believe everyone deserves access to quality education. Our
+              platform connects passionate learners with experienced instructors
+              and practical learning experiences.
+            </p>
+
+            <div class="about-features">
+              <div>
+                <i class="fa-solid fa-circle-check"></i> Expert Instructors
+              </div>
+              <div>
+                <i class="fa-solid fa-circle-check"></i> Flexible Online
+                Learning
+              </div>
+              <div>
+                <i class="fa-solid fa-circle-check"></i> Practical Projects
+              </div>
+              <div>
+                <i class="fa-solid fa-circle-check"></i> Professional
+                Certificates
+              </div>
+            </div>
+
+            <a href="#courses" class="btn-primary">
+              Discover More
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- CATEGORIES -->
+      <section class="categories section-padding" id="categories">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <span class="section-label">EXPLORE CATEGORIES</span>
+              <h2>Find Your Perfect <span>Learning Path</span></h2>
+            </div>
+
+            <a href="#courses" class="text-link">
+              All Categories
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <div class="category-grid">
+            <a href="#courses" class="category-card" data-category="development">
+              <div class="category-icon purple-bg">
+                <i class="fa-solid fa-code"></i>
+              </div>
+              <h3>Development</h3>
+              <p>Web & Software Development</p>
+              <span>Explore <i class="fa-solid fa-arrow-right"></i></span>
+            </a>
+
+            <a href="#courses" class="category-card" data-category="design">
+              <div class="category-icon orange-bg">
+                <i class="fa-solid fa-pen-nib"></i>
+              </div>
+              <h3>Graphic Design</h3>
+              <p>Creative Design & Branding</p>
+              <span>Explore <i class="fa-solid fa-arrow-right"></i></span>
+            </a>
+
+            <a href="#courses" class="category-card" data-category="business">
+              <div class="category-icon blue-bg">
+                <i class="fa-solid fa-chart-line"></i>
+              </div>
+              <h3>Business</h3>
+              <p>Business & Entrepreneurship</p>
+              <span>Explore <i class="fa-solid fa-arrow-right"></i></span>
+            </a>
+
+            <a href="#courses" class="category-card" data-category="marketing">
+              <div class="category-icon green-bg">
+                <i class="fa-solid fa-bullhorn"></i>
+              </div>
+              <h3>Marketing</h3>
+              <p>Digital Marketing & SEO</p>
+              <span>Explore <i class="fa-solid fa-arrow-right"></i></span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- COURSES -->
+      <section class="courses section-padding" id="courses">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <span class="section-label">POPULAR COURSES</span>
+              <h2>Explore Our <span>Top Courses</span></h2>
+              <p>Learn valuable skills with our expert-led programs.</p>
+            </div>
+
+            <a href="./courses.html" class="text-link">
+              View All Courses
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <!-- SEARCH AND FILTER -->
+          <div class="course-tools">
+            <input
+              type="search"
+              id="courseSearch"
+              placeholder="Search for a course..."
+              aria-label="Search courses"
+            />
+
+            <div class="course-filters">
+              <button type="button" data-filter="all" class="active">
+                All Courses
+              </button>
+              <button type="button" data-filter="development">
+                Development
+              </button>
+              <button type="button" data-filter="design">Design</button>
+              <button type="button" data-filter="marketing">Marketing</button>
+            </div>
+          </div>
+
+          <div class="course-grid">
+            <article class="course-card" data-category="development">
+              <div class="course-image">
+                <img
+                  src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=85"
+                  alt="Web Development Course"
+                />
+
+                <span class="course-category">Development</span>
+
+                <button class="wishlist-btn" type="button" aria-label="Add to wishlist">
+                  <i class="fa-regular fa-heart"></i>
+                </button>
+              </div>
+
+              <div class="course-content">
+                <div class="course-meta">
+                  <span><i class="fa-regular fa-clock"></i> 12 Weeks</span>
+                  <span><i class="fa-solid fa-book"></i> 24 Lessons</span>
+                </div>
+
+                <h3 class="course-title">Complete Web Development Bootcamp</h3>
+                <p>Master HTML, CSS, JavaScript and modern web technologies.</p>
+
+                <div class="course-rating">
+                  <i class="fa-solid fa-star"></i>
+                  <strong>4.9</strong>
+                  <span>(120 Reviews)</span>
+                </div>
+
+                <div class="course-footer">
+                  <div class="instructor-mini">
+                    <img src="https://i.pravatar.cc/80?img=12" alt="Instructor" />
+                    <span>John Smith</span>
+                  </div>
+                  <strong>Free</strong>
+                </div>
+
+                <button class="enroll-btn" type="button" data-course="Complete Web Development Bootcamp">
+                  Enroll Now
+                </button>
+              </div>
+            </article>
+
+            <article class="course-card" data-category="design">
+              <div class="course-image">
+                <img
+                  src="https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=800&q=85"
+                  alt="Graphic Design Course"
+                />
+
+                <span class="course-category">Design</span>
+
+                <button class="wishlist-btn" type="button" aria-label="Add to wishlist">
+                  <i class="fa-regular fa-heart"></i>
+                </button>
+              </div>
+
+              <div class="course-content">
+                <div class="course-meta">
+                  <span><i class="fa-regular fa-clock"></i> 8 Weeks</span>
+                  <span><i class="fa-solid fa-book"></i> 18 Lessons</span>
+                </div>
+
+                <h3 class="course-title">
+                  Professional Graphic Design Masterclass
+                </h3>
+                <p>
+                  Develop your creative skills using professional design tools.
+                </p>
+
+                <div class="course-rating">
+                  <i class="fa-solid fa-star"></i>
+                  <strong>4.8</strong>
+                  <span>(95 Reviews)</span>
+                </div>
+
+                <div class="course-footer">
+                  <div class="instructor-mini">
+                    <img src="https://i.pravatar.cc/80?img=32" alt="Instructor" />
+                    <span>Sarah Ahmed</span>
+                  </div>
+                  <strong>Free</strong>
+                </div>
+
+                <button class="enroll-btn" type="button" data-course="Professional Graphic Design Masterclass">
+                  Enroll Now
+                </button>
+              </div>
+            </article>
+
+            <article class="course-card" data-category="marketing">
+              <div class="course-image">
+                <img
+                  src="https://images.unsplash.com/photo-1557838923-2985c318be48?auto=format&fit=crop&w=800&q=85"
+                  alt="Digital Marketing Course"
+                />
+
+                <span class="course-category">Marketing</span>
+
+                <button class="wishlist-btn" type="button" aria-label="Add to wishlist">
+                  <i class="fa-regular fa-heart"></i>
+                </button>
+              </div>
+
+              <div class="course-content">
+                <div class="course-meta">
+                  <span><i class="fa-regular fa-clock"></i> 10 Weeks</span>
+                  <span><i class="fa-solid fa-book"></i> 20 Lessons</span>
+                </div>
+
+                <h3 class="course-title">Digital Marketing & SEO Strategy</h3>
+                <p>Learn how to grow brands and businesses online.</p>
+
+                <div class="course-rating">
+                  <i class="fa-solid fa-star"></i>
+                  <strong>4.9</strong>
+                  <span>(110 Reviews)</span>
+                </div>
+
+                <div class="course-footer">
+                  <div class="instructor-mini">
+                    <img src="https://i.pravatar.cc/80?img=47" alt="Instructor" />
+                    <span>Michael James</span>
+                  </div>
+                  <strong>Free</strong>
+                </div>
+
+                <button class="enroll-btn" type="button" data-course="Digital Marketing & SEO Strategy">
+                  Enroll Now
+                </button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- STATISTICS -->
+      <section class="statistics">
+        <div class="container statistics-grid">
+          <div class="stat-item">
+            <i class="fa-solid fa-users"></i>
+            <h2>10,000+</h2>
+            <p>Happy Students</p>
+          </div>
+
+          <div class="stat-item">
+            <i class="fa-solid fa-book-open"></i>
+            <h2>200+</h2>
+            <p>Online Courses</p>
+          </div>
+
+          <div class="stat-item">
+            <i class="fa-solid fa-chalkboard-user"></i>
+            <h2>50+</h2>
+            <p>Expert Instructors</p>
+          </div>
+
+          <div class="stat-item">
+            <i class="fa-solid fa-certificate"></i>
+            <h2>5,000+</h2>
+            <p>Certificates Issued</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- INSTRUCTORS -->
+      <section class="instructors section-padding" id="instructors">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <span class="section-label">MEET OUR TEAM</span>
+              <h2>Learn From <span>Expert Instructors</span></h2>
+            </div>
+          </div>
+
+          <div class="instructor-grid">
+            <article class="instructor-card">
+              <img src="https://i.pravatar.cc/400?img=12" alt="Mohamed Hassan" />
+              <div>
+                <h3>Mohamed Hassan</h3>
+                <p>Web Development Expert</p>
+                <div class="social-links">
+                  <a href="#contact" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                  <a href="#contact" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                  <a href="#contact" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+              </div>
+            </article>
+
+            <article class="instructor-card">
+              <img src="https://i.pravatar.cc/400?img=47" alt="Amina Ali" />
+              <div>
+                <h3>Amina Ali</h3>
+                <p>UI/UX Design Expert</p>
+                <div class="social-links">
+                  <a href="#contact" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                  <a href="#contact" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                  <a href="#contact" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+              </div>
+            </article>
+
+            <article class="instructor-card">
+              <img src="https://i.pravatar.cc/400?img=11" alt="Abdi Noor" />
+              <div>
+                <h3>Abdi Noor</h3>
+                <p>Graphic Design Expert</p>
+                <div class="social-links">
+                  <a href="#contact" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                  <a href="#contact" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                  <a href="#contact" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- TESTIMONIALS -->
+      <section class="testimonials section-padding" id="testimonials">
+        <div class="container">
+          <div class="section-heading centered">
+            <div>
+              <span class="section-label">STUDENT SUCCESS STORIES</span>
+              <h2>What Our <span>Students Say</span></h2>
+              <p>Real experiences from our learning community.</p>
+            </div>
+          </div>
+
+          <div class="testimonial-grid">
+            <article class="testimonial-card">
+              <div class="testimonial-stars">★★★★★</div>
+              <p>
+                "EduLearn helped me develop my web development skills. The
+                courses are easy to understand and very practical."
+              </p>
+              <div class="testimonial-author">
+                <img src="https://i.pravatar.cc/100?img=12" alt="Student" />
+                <div>
+                  <h3>Ahmed Mohamed</h3>
+                  <span>Web Development Student</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="testimonial-card">
+              <div class="testimonial-stars">★★★★★</div>
+              <p>
+                "The instructors are excellent, and I love the flexible learning
+                experience. I highly recommend this platform."
+              </p>
+              <div class="testimonial-author">
+                <img src="https://i.pravatar.cc/100?img=32" alt="Student" />
+                <div>
+                  <h3>Fatima Hassan</h3>
+                  <span>Graphic Design Student</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="testimonial-card">
+              <div class="testimonial-stars">★★★★★</div>
+              <p>
+                "I gained valuable digital marketing knowledge and improved my
+                professional skills through EduLearn."
+              </p>
+              <div class="testimonial-author">
+                <img src="https://i.pravatar.cc/100?img=47" alt="Student" />
+                <div>
+                  <h3>Ali Abdullahi</h3>
+                  <span>Marketing Student</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- CALL TO ACTION -->
+      <section class="cta-section">
+        <div class="container cta-container">
+          <div>
+            <span>START YOUR JOURNEY TODAY</span>
+            <h2>Ready To Transform Your Future?</h2>
+            <p>Join thousands of students learning new skills every day.</p>
+          </div>
+
+          <a href="./login.html" class="cta-button">
+            Join EduLearn Now
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="contact section-padding" id="contact">
+        <div class="container contact-grid">
+          <div class="contact-info">
+            <span class="section-label">GET IN TOUCH</span>
+            <h2>Let's Start A <span>Conversation.</span></h2>
+
+            <p>
+              Have a question about our courses? Contact our team and we will be
+              happy to help.
+            </p>
+
+            <div class="contact-detail">
+              <i class="fa-solid fa-envelope"></i>
+              <div>
+                <h3>Email Us</h3>
+                <p>support@edulearn.com</p>
+              </div>
+            </div>
+
+            <div class="contact-detail">
+              <i class="fa-solid fa-phone"></i>
+              <div>
+                <h3>Call Us</h3>
+                <p>+252 61 0000000</p>
+              </div>
+            </div>
+
+            <div class="contact-detail">
+              <i class="fa-solid fa-location-dot"></i>
+              <div>
+                <h3>Our Location</h3>
+                <p>Mogadishu, Somalia</p>
+              </div>
+            </div>
+          </div>
+
+          <form class="contact-form" id="contactForm">
+            <h3>Send Us A Message</h3>
+
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your name"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                placeholder="Enter subject"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="message">Your Message</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                placeholder="Write your message..."
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn-primary">
+              Send Message
+              <i class="fa-solid fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div class="footer-about">
+          <a href="#home" class="logo footer-logo">
+            <div class="logo-icon">
+              <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <span>Edu<span class="logo-highlight">Learn.</span></span>
+          </a>
+
+          <p>
+            Empowering learners worldwide with quality online education and
+            professional skills.
+          </p>
+
+          <div class="footer-social">
+            <a href="#contact" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#contact" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#contact" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#contact" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
         </div>
 
-     </div>
-    </div>
-
-    <div class="about-image">
-        <img src="https://media.istockphoto.com/id/1571674952/photo/back-view-of-teenage-girl-using-laptop-during-computer-class-at-high-school.jpg?s=612x612&w=0&k=20&c=sWRdiVLe3V6parbnby6vKGh4ZtUOgqmDd8uWuiWthV8=" alt="">
-
-    </div>
-</section>
-<!-- courses -->
- <section id="courses">
-       <h2>popular-courses</h2>
-       <div class="courses-container">
-    <div class="course-card">
-    <img src="https://images.openai.com/static-rsc-4/QPNBPElZnaIVFCuU1VSzYpZhnJCaXeLyAg9jSMtHXM7Meg4sY9HgHfqc9CdBJuykXgiltqg2AqP-2JxrOMpMVvjF8WTwm7m_8i4-VIVR1AG2Lhk74aeWKw-ckvJ4wiFZkYzI7iluvey79s0nkLQ4tibq54R3rHczf3x38xFNwQY?purpose=inline">
-    <h3>Web Development<course-card/h3>
-    <p>12 weeks <span> beginener</span></p>
-    <button>Enroll Now</button>
-
-    </div>
-
-    <div class="course-card">   
-    <img src="https://images.openai.com/static-rsc-4/5BFVq3dOlryVgLButUFHd_aopmIiikff4LjKuGCVNMDlVCN0zPv23Qp_vHYm4eFmzEFRroyXSEyF7xWHnZBmP-GTmCRZQvD50b8I-0fr8AAPGaGbQIRkzKT0mFrcDV1WM1alyFQu-sE6wljj1wbhHzJGVXBiKbLoQDC5JfU7O3I?purpose=inline">
-    <h3>. UI/UX Design</h3>
-    <p>8 weeks <span> beginener</span></p>
-    <button>Enroll Now</button>
-
-    </div>
-    <div class="course-card">
-    <img src="https://images.openai.com/static-rsc-4/wadIYrkDdbzQtE0FFgJuhHxuRIfmAZLCueeH_5cL-sWtxZ0lhTbiu7riTDAtL-yFA9LCM2IeexCmgFSvjGltj98wkiQo5uZjVWQ8IHEI-CILM2HFhYnA7Nt1FY124AXuLBdJqXTqJKnvGsvfIw6rYlpRIA4PzXarXTJtFewpui4?purpose=inline">
-    <h3>. Graphic Design</h3>
-    <p>10 weeks <span> beginener</span></p>
-    <button>Enroll Now</button>
-
-    </div>
-
-    <div class="course-card">
-    <img src="https://images.openai.com/static-rsc-4/Pbz5mV8Gi0MfXARkfZIJ-rBdNbaqCtUgm1Ze3GsYQlXTgnXq-5APitQ5qFs2LAol3KTieX-4wpFQ8q1To-pUAaMq-fcREux3ouJYyxskHKlwC2AGlHE_px0f5DrXvKKX9p789McFXU1W1Na7WAlKsVvZE1kA-Mh5p1gciv9JzZE?purpose=inline">
-    <h3>.Digital Marketing</h3>
-    <p>8 weeks <span> beginener</span></p>
-    <button>Enroll Now</button>
-
-    </div>
-    
-    <div class="course-card">
-    <img src="https://images.openai.com/static-rsc-4/udR6-RAWKyJRFujNPvj5HWeLfhmQVJvmnpXKdh02wZNJuPhtCirkPGSaOkUeelQojwge6yc7YvCxmDXoL4vTuF6tzMiCWPZ2q2TAIrYoiJPf_xU94xydB01lOKnOX-4BwQ7YSN4lCLRZaPIYbptPeHDAU_1m3X_FG5yVqysyRoQ?purpose=inline">
-    <h3>. Data Analysis</h3>
-    <p>8 weeks <span> beginener</span></p>
-    <button>Enroll Now</button>
-
-    </div>
-    
-    <div class="course-card">
-    <img src="https://images.openai.com/static-rsc-4/T_APbc1acd6mASlPhoEKB7yC-YWphTMoVt8tp6qZBwCeEHeizMP6xfFBvezKenEMUezL5kEfuw92PzpiW82jmxJub4907EzYVIk2DL31hPcJRyDu7F1-dG3rTL8ySy-MjfR-Ch1YO4Mo2Kr-hqUy7rlRgbEanwL2KS-lMqP-rfY?purpose=inline">
-    <h3>. IT Support</h3>
-    <p>8 weeks <span> beginener</span></p>
-    <button>Enroll Now</button>
-
-    </div>
-    
-</div>
- </section>
-
- <!-- instructors -->
-  <section id="instructors">
-        <h2>Our Instructors</h2>
-   <div class="instructors-container">
-
-
-    <div  class="instructors-card">
-        <img src="https://media.istockphoto.com/id/2224453551/photo/software-developers-reviewing-code-on-computer-screen.jpg?s=612x612&w=0&k=20&c=WdMGquMTr439uphaDsIHmOurjagiAPgQwKm7rtr5l20=">
-          <h3>Mohamed Hassan</h3>
-          <p>Web Development</p>
-
-    </div>
-
-    <div  class="instructors-card">
-        <img src="https://media.istockphoto.com/id/2232843523/photo/ui-ux-design-and-development-concepts-developers-interact-with-cutting-edge-virtual-screens.jpg?s=612x612&w=0&k=20&c=0thc6YIjyeAivM_06FPCUQAZVjr3pdOsgFek9r8XrHo=" alt="">
-          <h3>Amina Ali</h3>
-          <p>UI/UX Design</p>
-
-    </div>
-    <div  class="instructors-card">
-        <img src="https://media.istockphoto.com/id/2231947588/video/close-up-hand-of-creative-designer-team-brainstorm-branding-ar-project-with-designer-team-at.jpg?s=640x640&k=20&c=dAkFd8K-x8FV3yvwyA1BVLGDqOtS8E9l-L3f3H-qX34=" alt="">
-          <h3>Abdi Noor</h3>
-          <p>Graphic Design</p>
-
-    </div>
-    <div  class="instructors-card">
-        <img src="https://media.istockphoto.com/id/2222963971/photo/businessman-analyzing-financial-data-on-laptop-in-modern-office.jpg?s=612x612&w=0&k=20&c=Mv05iXy3bP-xesdlL8d31TICCn1sh8po4mdjvXSZCj4=" alt="">
-          <h3>Fatima Ahmed</h3>
-          <p>Digital Marketing</p>
-
-    </div>
-
-   </div>
-
-  </section>
-
-  <!-- why students sey -->
-
-  <section  class="students-say">
-
-    <h2>Why Students Say</h2>
-
-    <div class="student-container">
-        
-        <div class="student-card">
-             <span>⭐️⭐️⭐️⭐️⭐️</span>
-             <h3>Mohamed Hassan</h3>
-             <p>The Web Development course helped me build real websites and improve my coding skills</p>
-
-        </div>
-        <div class="student-card">
-             <span>⭐️⭐️⭐️⭐️⭐️</span>
-             <h3>Amina Ali</h3>
-             <p>I really enjoyed the UI/UX Design course. The lessons were simple, practical, and easy to understand</p>
-
-        </div>
-        <div class="student-card">
-             <span>⭐️⭐️⭐️⭐️⭐️</span>
-             <h3>Abdi Noor</h3>
-             <p>The Graphic Design course improved my creativity and taught me useful skills for real projects.</p>
-
-        </div>
-        <div class="student-card">
-             <span>⭐️⭐️⭐️⭐️⭐️</span>
-             <h3>Fatima Ahmed</h3>
-             <p>The Digital Marketing course gave me practical knowledge that I can use to grow businesses online.</p>
-
+        <div class="footer-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#courses">Courses</a></li>
+            <li><a href="#instructors">Instructors</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
         </div>
 
-    </div>
+        <div class="footer-links">
+          <h3>Popular Courses</h3>
+          <ul>
+            <li><a href="#courses">Web Development</a></li>
+            <li><a href="#courses">Graphic Design</a></li>
+            <li><a href="#courses">Digital Marketing</a></li>
+            <li><a href="#courses">UI/UX Design</a></li>
+            <li><a href="#courses">Programming</a></li>
+          </ul>
+        </div>
 
-  </section>
+        <div class="footer-links">
+          <h3>Support</h3>
+          <ul>
+            <li><a href="#contact">Help Center</a></li>
+            <li><a href="#contact">Contact Support</a></li>
+            <li><a href="./privacy.html">Privacy Policy</a></li>
+            <li><a href="./terms.html">Terms & Conditions</a></li>
+          </ul>
+        </div>
+      </div>
 
- </main>
- <!-- contect us -->
- <section  id="contact">
-       <h2>Contact Us</h2>
-    <div class=" contect-us">
+      <div class="footer-bottom">
+        <div class="container">
+          <p>© 2026 EduLearn. All Rights Reserved.</p>
+          <p>Designed with <i class="fa-solid fa-heart"></i> for Education.</p>
+        </div>
+      </div>
+    </footer>
 
-  
-     
-<div class="contact-info">
-  
-
-        <p>📍 Address: Mogadishu, Somalia</p>
-        <p>📞 Phone: +252 61 4 48-48-40</p>
-        <p>📧 Email: info@wenscofee.com</p>
-        <p>🕒 Open: Every Day – 7:00 AM to 10:00 PM</p>
-    </div>
-
-    <form>
-        <input type="text" placeholder="inter your name">
-        <input type="email" placeholder="inter your email">
-    <textarea  placeholder="inter your massage"></textarea>
-    <button>send</button>
-
-    </form>
-</div>
-
-    </section>
-
-<footer>
-            @copyright  &copy; 2026 may site  all rights reserved
-        </footer>
-
-
-    
-</body>
+    <!-- Main JavaScript -->
+    <script src="./script.js"></script>
+  </body>
 </html>
